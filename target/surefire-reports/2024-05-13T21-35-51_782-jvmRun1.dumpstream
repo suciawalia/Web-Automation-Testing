@@ -1,0 +1,57 @@
+# Created at 2024-05-13T21:36:04.550
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+# Created at 2024-05-13T21:36:06.184
+Unexpected IOException with stream: May 13, 2024 9:36:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+
+
+# Created at 2024-05-13T21:36:07.789
+Unexpected IOException with stream:   [32mGiven [0m[32mI am on the login page[0m                                            [90m# com.testswaglabs.stepdefinition.LoginStepDefinitions.goToLoginPage()[0m
+
+
+# Created at 2024-05-13T21:36:08.351
+Unexpected IOException with stream:   [32mWhen [0m[32mI fill in the username [0m[32m[1m"standard_user"[0m[32m and password [0m[32m[1m"secret_sauce"[0m [90m# com.testswaglabs.stepdefinition.LoginStepDefinitions.enterCredentials(java.lang.String,java.lang.String)[0m
+
+
+# Created at 2024-05-13T21:36:08.692
+Unexpected IOException with stream:   [32mAnd [0m[32mI click the login button[0m                                            [90m# com.testswaglabs.stepdefinition.LoginStepDefinitions.clickLoginButton()[0m
+
+
+# Created at 2024-05-13T21:36:08.731
+Unexpected IOException with stream:   [32mThen [0m[32mI have logged in successfully[0m                                      [90m# com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyLoggedInSuccessfully()[0m
+
+
+# Created at 2024-05-13T21:36:10.195
+Unexpected IOException: 6,1,User Login,Validate Password Matching with Username(User Login),null,null,null
+
+
+# Created at 2024-05-13T21:36:10.236
+Unexpected IOException with stream: [32m[1m?????????????????????????????????????????????????????????????????????????????????????[0m
+[32m[1m?[0m Share your Cucumber Report with your team at [36m[1m[4mhttps://reports.cucumber.io[0m          [32m[1m?[0m
+[32m[1m?[0m Activate publishing with one of the following:                                    [32m[1m?[0m
+[32m[1m?[0m                                                                                   [32m[1m?[0m
+[32m[1m?[0m src/test/resources/cucumber.properties:          [36mcucumber.publish.enabled[0m=[36mtrue[0m    [32m[1m?[0m
+[32m[1m?[0m src/test/resources/junit-platform.properties:    [36mcucumber.publish.enabled[0m=[36mtrue[0m    [32m[1m?[0m
+[32m[1m?[0m Environment variable:                            [36mCUCUMBER_PUBLISH_ENABLED[0m=[36mtrue[0m    [32m[1m?[0m
+[32m[1m?[0m JUnit:                                           [36m@CucumberOptions[0m(publish = [36mtrue[0m) [32m[1m?[0m
+[32m[1m?[0m                                                                                   [32m[1m?[0m
+[32m[1m?[0m More information at [36mhttps://reports.cucumber.io/docs/cucumber-jvm[0m                 [32m[1m?[0m
+[32m[1m?[0m                                                                                   [32m[1m?[0m
+[32m[1m?[0m Disable this message with one of the following:                                   [32m[1m?[0m
+[32m[1m?[0m                                                                                   [32m[1m?[0m
+[32m[1m?[0m src/test/resources/cucumber.properties:          [36mcucumber.publish.quiet[0m=[36mtrue[0m      [32m[1m?[0m
+[32m[1m?[0m src/test/resources/junit-platform.properties:    [36mcucumber.publish.quiet[0m=[36mtrue[0m      [32m[1m?[0m
+[32m[1m?????????????????????????????????????????????????????????????????????????????????????[0m
+
+
+# Created at 2024-05-13T21:36:10.239
+Unexpected IOException: 2,1,org.apache.maven.surefire.junit4.JUnit4Provider,com.testswaglabs.TestRunner.TestLogin,null,null,null
+
+

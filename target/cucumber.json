@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2024-05-13T14:13:26.407Z",
+        "start_timestamp": "2024-05-13T14:40:57.266Z",
         "line": 3,
         "name": "User successfully logs in with registered username and password",
         "description": "",
@@ -11,7 +11,7 @@
         "after": [
           {
             "result": {
-              "duration": 1216000000,
+              "duration": 1640000000,
               "status": "passed"
             },
             "match": {
@@ -24,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 26190000000,
+              "duration": 4784000000,
               "status": "passed"
             },
             "line": 4,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 428000000,
+              "duration": 400000000,
               "status": "passed"
             },
             "line": 5,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 211000000,
+              "duration": 174000000,
               "status": "passed"
             },
             "line": 6,
@@ -70,10 +70,90 @@
           },
           {
             "result": {
-              "duration": 29000000,
+              "duration": 72000000,
               "status": "passed"
             },
             "line": 7,
+            "name": "I have logged in successfully",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyLoggedInSuccessfully()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-05-13T14:41:04.535Z",
+        "line": 9,
+        "name": "Validate Password Matching with Username",
+        "description": "",
+        "id": "user-login;validate-password-matching-with-username",
+        "after": [
+          {
+            "result": {
+              "duration": 1222000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3247000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I am on the login page",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 589000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I fill in the username \"performance_glitch_user\" and password \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"performance_glitch_user\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"secret_sauce\"",
+                  "offset": 62
+                }
+              ],
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.enterCredentials(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5313000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I click the login button",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.clickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34000000,
+              "status": "passed"
+            },
+            "line": 13,
             "name": "I have logged in successfully",
             "match": {
               "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyLoggedInSuccessfully()"
