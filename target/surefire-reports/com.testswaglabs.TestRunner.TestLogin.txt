@@ -1,4 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: com.testswaglabs.TestRunner.TestLogin
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.346 s - in com.testswaglabs.TestRunner.TestLogin
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 83.122 s <<< FAILURE! - in com.testswaglabs.TestRunner.TestLogin
+User attempts to login without providing username and password(User Login)  Time elapsed: 11.21 s  <<< FAILURE!
+java.lang.AssertionError
+
+User attempts to login without providing username(User Login)  Time elapsed: 11.402 s  <<< FAILURE!
+java.lang.AssertionError
+
+User attempts to login without providing password(User Login)  Time elapsed: 13.365 s  <<< FAILURE!
+java.lang.AssertionError
+
