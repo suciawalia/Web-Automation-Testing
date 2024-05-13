@@ -8,8 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class LoginStepDefinitions {
     WebDriver driver;
@@ -37,7 +37,24 @@ public class LoginStepDefinitions {
         String currentUrl = driver.getCurrentUrl();
         assertTrue(currentUrl.contains("https://www.saucedemo.com/inventory.html"));
     }
-    
+
+    @When("I attempt to login without providing username and password")
+    public void attemptLoginWithoutCredentials() {
+        driver.findElement(By.id("login-button")).click();
+    }
+
+    @Then("I should remain on the login page")
+    public void verifyRemainOnLoginPage() {
+        String currentUrl = driver.getCurrentUrl();
+        assertTrue(currentUrl.contains("https://www.saucedemo.com/"));
+    }
+
+    @Then("I should see the error message {string}")
+    public void verifyErrorMessage(String errorMessage) {
+        String actualErrorMessage = driver.findElement(By.cssSelector(".error-message-container.error")).getText();
+        assertTrue(actualErrorMessage.contains(errorMessage));
+    }
+
     @After
     public void closeBrowser() {
         driver.quit();
