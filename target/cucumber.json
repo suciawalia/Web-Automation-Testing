@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2024-05-13T14:13:26.407Z",
+        "start_timestamp": "2024-05-13T15:42:34.422Z",
         "line": 3,
         "name": "User successfully logs in with registered username and password",
         "description": "",
@@ -11,7 +11,7 @@
         "after": [
           {
             "result": {
-              "duration": 1216000000,
+              "duration": 2311067100,
               "status": "passed"
             },
             "match": {
@@ -24,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 26190000000,
+              "duration": 12548422700,
               "status": "passed"
             },
             "line": 4,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 428000000,
+              "duration": 1117413100,
               "status": "passed"
             },
             "line": 5,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 211000000,
+              "duration": 1818844100,
               "status": "passed"
             },
             "line": 6,
@@ -70,13 +70,89 @@
           },
           {
             "result": {
-              "duration": 29000000,
+              "duration": 116931000,
               "status": "passed"
             },
             "line": 7,
             "name": "I have logged in successfully",
             "match": {
               "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyLoggedInSuccessfully()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-05-13T15:42:52.621Z",
+        "line": 9,
+        "name": "User attempts to login without providing username and password",
+        "description": "",
+        "id": "user-login;user-attempts-to-login-without-providing-username-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 1705344800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5693531500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I am on the login page",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 644296300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I attempt to login without providing username and password",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.attemptLoginWithoutCredentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 168004000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should remain on the login page",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyRemainOnLoginPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 507890400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I should see the error message \"Epic sadface: Username is required\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Epic sadface: Username is required\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyErrorMessage(java.lang.String)"
             },
             "keyword": "Then "
           }
