@@ -32,6 +32,11 @@ public class LoginStepDefinitions {
         driver.findElement(By.id("login-button")).click();
     }
 
+    @When("I fill in the password {string} without providing username")
+    public void enterPasswordOnly(String password) {
+        driver.findElement(By.id("password")).sendKeys(password);
+    }
+
     @Then("I have logged in successfully")
     public void verifyLoggedInSuccessfully() {
         String currentUrl = driver.getCurrentUrl();
