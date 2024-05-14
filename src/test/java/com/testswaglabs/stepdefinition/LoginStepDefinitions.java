@@ -1,5 +1,6 @@
 package com.testswaglabs.stepdefinition;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -62,7 +63,9 @@ public class LoginStepDefinitions {
     @Then("I should see the error message {string}")
     public void verifyErrorMessage(String errorMessage) {
         String actualErrorMessage = driver.findElement(By.cssSelector(".error-message-container.error")).getText();
-        assertTrue(actualErrorMessage.contains(errorMessage));
+        System.out.println("Expected error message: " + errorMessage);
+        System.out.println("Actual error message: " + actualErrorMessage);
+        assertEquals(errorMessage, actualErrorMessage);
     }
 
     @After
