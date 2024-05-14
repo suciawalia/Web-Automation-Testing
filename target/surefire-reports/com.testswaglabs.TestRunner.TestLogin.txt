@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.testswaglabs.TestRunner.TestLogin
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 79.578 s <<< FAILURE! - in com.testswaglabs.TestRunner.TestLogin
+User attempts to login without providing username and password(User Login)  Time elapsed: 15.722 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[You need Username & Password!]> but was:<[Epic sadface: Username is required]>
+
+User attempts to login without providing username(User Login)  Time elapsed: 10.192 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[You need Username !]> but was:<[Epic sadface: Username is required]>
+
+User attempts to login without providing password(User Login)  Time elapsed: 14.527 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[You need Password !]> but was:<[Epic sadface: Password is required]>
+
