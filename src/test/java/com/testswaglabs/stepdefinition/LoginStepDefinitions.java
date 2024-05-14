@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,10 +16,14 @@ import io.cucumber.java.en.When;
 public class LoginStepDefinitions {
     WebDriver driver;
 
-    @Given("I am on the login page")
-    public void goToLoginPage() {
+    @Before
+    public void setupDriver(){
         System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
         driver = new ChromeDriver();
+    }
+
+    @Given("I am on the login page")
+    public void goToLoginPage() {
         driver.get("https://www.saucedemo.com/");
     }
 
@@ -48,7 +53,7 @@ public class LoginStepDefinitions {
         String currentUrl = driver.getCurrentUrl();
         assertTrue(currentUrl.contains("https://www.saucedemo.com/inventory.html"));
     }
-
+    
     @When("I attempt to login without providing username and password")
     public void attemptLoginWithoutCredentials() {
         driver.findElement(By.id("login-button")).click();
