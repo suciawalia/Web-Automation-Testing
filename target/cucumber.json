@@ -3,15 +3,44 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2024-05-13T14:40:57.266Z",
-        "line": 3,
-        "name": "User successfully logs in with registered username and password",
+        "start_timestamp": "2024-05-14T04:07:20.830Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2312474000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.setupDriver()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1599921500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LogoutStepDefinitions.setupDriver()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Username or password isn\u0027t registered in the system",
         "description": "",
-        "id": "user-login;user-successfully-logs-in-with-registered-username-and-password",
+        "id": "user-login-and-login;username-or-password-isn-t-registered-in-the-system",
         "after": [
           {
             "result": {
-              "duration": 1640000000,
+              "duration": 1052585900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LogoutStepDefinitions.closeBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1105893600,
               "status": "passed"
             },
             "match": {
@@ -24,10 +53,10 @@
         "steps": [
           {
             "result": {
-              "duration": 4784000000,
+              "duration": 2158844600,
               "status": "passed"
             },
-            "line": 4,
+            "line": 17,
             "name": "I am on the login page",
             "match": {
               "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.goToLoginPage()"
@@ -36,11 +65,143 @@
           },
           {
             "result": {
-              "duration": 400000000,
+              "duration": 332034600,
               "status": "passed"
             },
-            "line": 5,
-            "name": "I fill in the username \"standard_user\" and password \"secret_sauce\"",
+            "line": 18,
+            "name": "I fill in the username \"standa_user\" and password \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"standa_user\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"secret_sauce\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.enterCredentials(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 136217900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I click the login button",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.clickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Username and password do not match any user in this service !]\u003e but was:\u003c[Epic sadface: Username and password do not match any user in this service]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyErrorMessage(LoginStepDefinitions.java:50)\r\n\tat ✽.I should see the error message \"Username and password do not match any user in this service !\"(file:///D:/BACKUP%20C/001Kuliah/Semester%206/PPL/Praktik/W12-W13/Web-Automation-Testing/src/test/resources/Login.feature:20)\r\n",
+              "duration": 62462000,
+              "status": "failed"
+            },
+            "line": 20,
+            "name": "I should see the error message \"Username and password do not match any user in this service !\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Username and password do not match any user in this service !\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyErrorMessage(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "The current screen is still on the login page",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.currentScreenLogin()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@focus"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-05-14T04:07:29.729Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1922744100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.setupDriver()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1619756000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LogoutStepDefinitions.setupDriver()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Username or password isn\u0027t registered in the system",
+        "description": "",
+        "id": "user-login-and-login;username-or-password-isn-t-registered-in-the-system",
+        "after": [
+          {
+            "result": {
+              "duration": 935931700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LogoutStepDefinitions.closeBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1010618900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2597155400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I am on the login page",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 306408500,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I fill in the username \"standard_user\" and password \"secret_sauc\"",
             "match": {
               "arguments": [
                 {
@@ -48,7 +209,7 @@
                   "offset": 23
                 },
                 {
-                  "val": "\"secret_sauce\"",
+                  "val": "\"secret_sauc\"",
                   "offset": 52
                 }
               ],
@@ -58,10 +219,10 @@
           },
           {
             "result": {
-              "duration": 174000000,
+              "duration": 136979800,
               "status": "passed"
             },
-            "line": 6,
+            "line": 27,
             "name": "I click the login button",
             "match": {
               "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.clickLoginButton()"
@@ -70,102 +231,46 @@
           },
           {
             "result": {
-              "duration": 72000000,
+              "duration": 8534600,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I have logged in successfully",
+            "line": 28,
+            "name": "The current screen is still on the login page",
             "match": {
-              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyLoggedInSuccessfully()"
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.currentScreenLogin()"
             },
             "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-05-13T14:41:04.535Z",
-        "line": 9,
-        "name": "Validate Password Matching with Username",
-        "description": "",
-        "id": "user-login;validate-password-matching-with-username",
-        "after": [
-          {
-            "result": {
-              "duration": 1222000000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.closeBrowser()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 3247000000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I am on the login page",
-            "match": {
-              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.goToLoginPage()"
-            },
-            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 589000000,
-              "status": "passed"
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Username and password do not match any user in this service !]\u003e but was:\u003c[Epic sadface: Username and password do not match any user in this service]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyErrorMessage(LoginStepDefinitions.java:50)\r\n\tat ✽.I should see the error message \"Username and password do not match any user in this service !\"(file:///D:/BACKUP%20C/001Kuliah/Semester%206/PPL/Praktik/W12-W13/Web-Automation-Testing/src/test/resources/Login.feature:29)\r\n",
+              "duration": 48763500,
+              "status": "failed"
             },
-            "line": 11,
-            "name": "I fill in the username \"performance_glitch_user\" and password \"secret_sauce\"",
+            "line": 29,
+            "name": "I should see the error message \"Username and password do not match any user in this service !\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"performance_glitch_user\"",
-                  "offset": 23
-                },
-                {
-                  "val": "\"secret_sauce\"",
-                  "offset": 62
+                  "val": "\"Username and password do not match any user in this service !\"",
+                  "offset": 31
                 }
               ],
-              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.enterCredentials(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 5313000000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I click the login button",
-            "match": {
-              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.clickLoginButton()"
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyErrorMessage(java.lang.String)"
             },
             "keyword": "And "
-          },
+          }
+        ],
+        "tags": [
           {
-            "result": {
-              "duration": 34000000,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "I have logged in successfully",
-            "match": {
-              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyLoggedInSuccessfully()"
-            },
-            "keyword": "Then "
+            "name": "@focus"
           }
         ]
       }
     ],
-    "name": "User Login",
+    "name": "User Login and Login",
     "description": "",
-    "id": "user-login",
+    "id": "user-login-and-login",
     "keyword": "Feature",
     "uri": "file:src/test/resources/Login.feature",
     "tags": []

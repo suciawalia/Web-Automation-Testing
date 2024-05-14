@@ -1,7 +1,6 @@
 package com.testswaglabs.stepdefinition;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertEquals;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +12,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 
-public class LoginStepDefinitions {
+public class LogoutStepDefinitions {
     WebDriver driver;
 
     @Before
@@ -22,36 +21,28 @@ public class LoginStepDefinitions {
         driver = new ChromeDriver();
     }
 
-    @Given("I am on the login page")
-    public void goToLoginPage() {
-        driver.get("https://www.saucedemo.com/");
-    }
-
-    @When("I fill in the username {string} and password {string}")
-    public void enterCredentials(String username, String password) {
-        driver.findElement(By.id("user-name")).sendKeys(username);
-        driver.findElement(By.id("password")).sendKeys(password);
-    }
-
-    @When("I click the login button")
-    public void clickLoginButton() {
-        driver.findElement(By.id("login-button")).click();
-    }
-
-    @Then("I have logged in successfully")
+    @Given("I have successfully logged in")
     public void verifyLoggedInSuccessfully() {
+        driver.get("https://www.saucedemo.com/");
+        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.id("login-button")).click();
         String currentUrl = driver.getCurrentUrl();
         assertTrue(currentUrl.contains("https://www.saucedemo.com/inventory.html"));
     }
 
-    @Then("I should see the error message {string}")
-    public void verifyErrorMessage(String errorMessage) {
-        String actualErrorMessage = driver.findElement(By.cssSelector(".error-message-container.error")).getText();
-        assertEquals(errorMessage, actualErrorMessage);
+    @Given("I have clicked the menu button")
+    public void clickMenuButton() {
+        driver.findElement(By.id("react-burger-menu-btn")).click();
     }
 
-    @Then("The current screen is still on the login page")
-    public void currentScreenLogin() {
+    @When("I click the logout button")
+    public void clickLogutButton() {
+        driver.findElement(By.id("logout_sidebar_link")).click();
+    }
+
+    @Then("I have logged out successfully")
+    public void verifyLoggedOutSuccessfully() {
         String currentUrl = driver.getCurrentUrl();
         assertTrue(currentUrl.contains("https://www.saucedemo.com/"));
     }

@@ -5,9 +5,9 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/resources",
+@CucumberOptions(tags="@focus", features="src/test/resources",
         glue= {"com.testswaglabs.stepdefinition"},
         plugin ={"pretty","json:target/cucumber.json"})
-public class TestLogin {
+public class TestLoginLogout {
 }
 
