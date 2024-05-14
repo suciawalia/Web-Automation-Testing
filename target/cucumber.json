@@ -1,0 +1,241 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-05-14T04:54:03.126Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2960000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.setupDriver()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1791000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LogoutStepDefinitions.setupDriver()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "User successfully logs in with registered username and password",
+        "description": "",
+        "id": "user-login;user-successfully-logs-in-with-registered-username-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 931000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LogoutStepDefinitions.closeBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1179000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2956000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on the login page",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 494000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I fill in the username \"standard_user\" and password \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"standard_user\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"secret_sauce\"",
+                  "offset": 52
+                }
+              ],
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.enterCredentials(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 214000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click the login button",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.clickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I have logged in successfully",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyLoggedInSuccessfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sucitest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-05-14T04:54:13.825Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1878000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.setupDriver()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1839000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LogoutStepDefinitions.setupDriver()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Validate Password Matching with Username",
+        "description": "",
+        "id": "user-login;validate-password-matching-with-username",
+        "after": [
+          {
+            "result": {
+              "duration": 825000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LogoutStepDefinitions.closeBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 874000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4282000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I am on the login page",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.goToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 425000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I fill in the username \"performance_glitch_user\" and password \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"performance_glitch_user\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"secret_sauce\"",
+                  "offset": 62
+                }
+              ],
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.enterCredentials(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5472000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I click the login button",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.clickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 89000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I have logged in successfully",
+            "match": {
+              "location": "com.testswaglabs.stepdefinition.LoginStepDefinitions.verifyLoggedInSuccessfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sucitest"
+          }
+        ]
+      }
+    ],
+    "name": "User Login",
+    "description": "",
+    "id": "user-login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Login.feature",
+    "tags": []
+  }
+]

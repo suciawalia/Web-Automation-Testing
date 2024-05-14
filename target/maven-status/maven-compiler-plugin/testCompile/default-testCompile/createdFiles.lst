@@ -1,0 +1,3 @@
+com\testswaglabs\stepdefinition\LogoutStepDefinitions.class
+com\testswaglabs\TestRunner\TestLoginLogout.class
+com\testswaglabs\stepdefinition\LoginStepDefinitions.class
