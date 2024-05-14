@@ -31,13 +31,6 @@ Feature: User Login and Login
         And I click the login button
         Then I should remain on the login page
         And I should see the error message "You need Password !"
-
-    Scenario: Username or password isn't registered in the system
-        Given I am on the login page
-        When I fill in the username "standard_user" and password "secret_sauc"
-        And I click the login button
-        Then I should remain on the login page
-        And I should see the error message "Username and password do not match any user in this service !"
     
     Scenario: Username or password isn't registered in the system
         Given I am on the login page
@@ -45,3 +38,10 @@ Feature: User Login and Login
         And I click the login button
         Then I should see the error message "Username and password do not match any user in this service !"
         And I should remain on the login page
+    
+    Scenario: Username or password isn't registered in the system
+        Given I am on the login page
+        When I fill in the username "standard_user" and password "secret_sauc"
+        And I click the login button
+        Then I should remain on the login page
+        And I should see the error message "Username and password do not match any user in this service !"
