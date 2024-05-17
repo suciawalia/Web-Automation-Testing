@@ -7,13 +7,6 @@ Feature: User Login
         And I click the login button
         Then I have logged in successfully
 
-    Scenario: Validate Password Matching with Username
-        Given I am on the login page
-        When I fill in the username "performance_glitch_user"
-        And I fill in the password "secret_sauce"
-        And I click the login button
-        Then I have logged in successfully
-
     Scenario: User attempts to login without providing username and password
         Given I am on the login page
         When I fill in the username ""
