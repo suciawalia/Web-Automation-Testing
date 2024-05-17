@@ -7,8 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/resources",
         glue= {"com.testswaglabs.stepdefinition"},
-        plugin ={"pretty","json:target/cucumber.json"}
-        // publish = true
+        plugin ={"pretty","json:target/cucumber.json","html:test-report.html"}
         )
 public class TestRunner {
 }
