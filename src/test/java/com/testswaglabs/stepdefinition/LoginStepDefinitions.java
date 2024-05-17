@@ -3,71 +3,67 @@ package com.testswaglabs.stepdefinition;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.testswaglabs.pages.LoginPage;
+import com.testswaglabs.utils.DriverManager;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en.And;
 
 public class LoginStepDefinitions {
-    WebDriver driver;
+
+    private WebDriver driver = null;
+    private LoginPage login;
+    
+    private String loginPage = "https://www.saucedemo.com/";
+    private String dashboardPage = "https://www.saucedemo.com/inventory.html";
 
     @Before
-    public void setupDriver(){
-        System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
-        driver = new ChromeDriver();
+    public void setup(){
+        driver = DriverManager.getDriver();
+        login = new LoginPage(driver);
     }
 
     @Given("I am on the login page")
     public void goToLoginPage() {
-        driver.get("https://www.saucedemo.com/");
+        driver.get(loginPage);
     }
 
-    @When("I fill in the username {string} and password {string}")
-    public void enterCredentials(String username, String password) {
-        driver.findElement(By.id("user-name")).sendKeys(username);
-        driver.findElement(By.id("password")).sendKeys(password);
+    @When("I fill in the username {string}")
+    public void enterUsername(String username) {
+        login.enterUsername(username);
     }
 
-    @When("I click the login button")
+    @And("I fill in the password {string}")
+    public void enterPassword(String password){
+        login.enterPassword(password);
+    }
+
+    @And("I click the login button")
     public void clickLoginButton() {
-        driver.findElement(By.id("login-button")).click();
-    }
-
-    @When("I fill in the password {string} without providing username")
-    public void enterPasswordOnly(String password) {
-        driver.findElement(By.id("password")).sendKeys(password);
-    }
-
-    @When("I fill in the username {string} without providing password")
-    public void enterUsernameOnly(String username) {
-        driver.findElement(By.id("user-name")).sendKeys(username);
+        login.clickLogin();
     }
 
     @Then("I have logged in successfully")
     public void verifyLoggedInSuccessfully() {
         String currentUrl = driver.getCurrentUrl();
-        assertTrue(currentUrl.contains("https://www.saucedemo.com/inventory.html"));
-    }
-    
-    @When("I attempt to login without providing username and password")
-    public void attemptLoginWithoutCredentials() {
-        driver.findElement(By.id("login-button")).click();
+        assertTrue(currentUrl.contains(dashboardPage));
     }
 
     @Then("I should remain on the login page")
     public void verifyRemainOnLoginPage() {
         String currentUrl = driver.getCurrentUrl();
-        assertTrue(currentUrl.contains("https://www.saucedemo.com/"));
+        assertTrue(currentUrl.contains(loginPage));
     }
 
     @Then("I should see the error message {string}")
     public void verifyErrorMessage(String errorMessage) {
-        String actualErrorMessage = driver.findElement(By.cssSelector(".error-message-container.error")).getText();
+        String actualErrorMessage = login.getErrorMessage();
         System.out.println("Expected error message: " + errorMessage);
         System.out.println("Actual error message: " + actualErrorMessage);
         assertEquals(errorMessage, actualErrorMessage);
@@ -75,6 +71,6 @@ public class LoginStepDefinitions {
 
     @After
     public void closeBrowser() {
-        driver.quit();
+        DriverManager.quitDriver();
     }
 }
