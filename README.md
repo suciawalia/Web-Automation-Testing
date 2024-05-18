@@ -14,6 +14,15 @@ Program ini bertujuan untuk mengotomatisasi pengujian fitur login dan logout pad
 - **Login:** Pengguna dapat mengakses akun mereka dengan memasukkan kredensial yang valid (username dan password). 
 - **Logout:** Pengguna dapat melakukan logout dari akun mereka dan kembali ke halaman login.
 
+### Build With
+Web automation testing pada project ini menggunakan:
+- Cucumber
+- Selenium
+- WebDriverManager
+- JUnit
+- Cucumber Reportin
+- Maven
+
 ## Directory Tree Project
 ```
 .
@@ -73,10 +82,10 @@ Program ini bertujuan untuk mengotomatisasi pengujian fitur login dan logout pad
 
 ## Prerequisites
 
-- Install java
-- Install maven
-- Install Visual Studio Code
-- Install Extension Pack for java
+- **Java Development Kit (JDK)** versi 8
+- **Apache Maven** versi 3.6.0+
+- **IDE Visual Studio Code** dengan ekstensi Java atau Maven terbaru
+- **Browser** 
 
 ## Menjalankan Aplikasi
 
