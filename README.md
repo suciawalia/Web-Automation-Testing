@@ -18,46 +18,7 @@ Web automation testing pada project ini menggunakan:
 - Maven
 
 ## Directory Tree Project
-```
-.
-├───.vscode
-├───src
-│   ├───main
-│   │   └───java
-│   │       └───com
-│   │           └───testswaglabs
-│   │               ├───pages
-│   │               └───utils
-│   └───test
-│       ├───java
-│       │   └───com
-│       │       └───testswaglabs
-│       │           ├───stepdefinition
-│       │           └───TestRunner
-│       └───resources
-└───target
-    ├───classes
-    │   └───com
-    │       └───testswaglabs
-    │           ├───pages
-    │           └───utils
-    ├───generated-sources
-    │   └───annotations
-    ├───generated-test-sources
-    │   └───test-annotations
-    ├───maven-status
-    │   └───maven-compiler-plugin
-    │       ├───compile
-    │       │   └───default-compile
-    │       └───testCompile
-    │           └───default-testCompile
-    ├───surefire-reports
-    └───test-classes
-        └───com
-            └───testswaglabs
-                ├───stepdefinition
-                └───TestRunner
-```
+
 ### Penjelasan Directory Root Project
 1. **src:** Ini adalah direktori sumber (source) utama yang berisi kode sumber aplikasi.
 2. **main/java/com/testswaglabs/pages:** Ini adalah direktori untuk menyimpan kode yang menerapkan pola Page Object Model serta Page Factory yang berisi elemen-elemen halaman yang digunakan pada kode pengujian
