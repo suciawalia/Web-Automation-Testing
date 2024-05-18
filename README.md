@@ -1,9 +1,3 @@
----
-noteId: "8ab6ceb014e411efaad7f1646f2ad210"
-tags: []
-
----
-
 # Web Automation Testing Menggunakan Cucumber dan Selenium
 ## Deskripsi
 Program ini bertujuan untuk mengotomatisasi pengujian fitur login dan logout pada website Swag Labs (https://www.saucedemo.com/) menggunakan Cucumber dan Selenium. Dengan menggunakan pendekatan Behaviour Driven Development (BDD).
