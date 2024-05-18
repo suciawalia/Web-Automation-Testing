@@ -14,7 +14,7 @@ Web automation testing pada project ini menggunakan:
 - Selenium
 - WebDriverManager
 - JUnit
-- Cucumber Reportin
+- Cucumber Reporting
 - Maven
 
 ## Directory Tree Project
@@ -106,6 +106,15 @@ Dengan menambahkan "html:test-report.html" pada TestRunner.java
         plugin ={"pretty","json:target/cucumber.json","html:test-report.html"}
         )
 ```
+## Test Cases
+1. Login Menggunakan Username yang Terdaftar pada Sistem
+2. Login dengan Keadaan Username dan Password Tidak Diisi
+3. Login dengan Keadaan Username Tidak Diisi
+4. Login dengan Keadaan Password Tidak Diisi
+5. Login dengan Keadaan Username Tidak Terdaftar pada Sistem
+6. Login dengan Keadaan Username Terdaftar Pada Sistem namun Password Tidak Sesuai
+7. Logout dengan Menekan Tombol "Logout"
+
 ## Hasil Tests
 ### Root file test report
 ```
