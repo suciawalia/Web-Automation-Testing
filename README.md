@@ -42,7 +42,7 @@ Web automation testing pada project ini menggunakan:
 15. **maven-status/maven-compiler-plugin:** Direktori yang berisi informasi status proyek yang dihasilkan oleh Maven.
 17. **surefire-reports:** Direktori yang berisi laporan hasil pengujian yang dihasilkan oleh Surefire plugin.
 18. **pom.xml:** Ini adalah berkas POM (Project Object Model) Maven yang berisi konfigurasi proyek, dependensi, dan informasi lainnya yang diperlukan oleh Maven untuk membangun proyek.
-19. **test-report.html:** Ini adalah hasil generate report test yang sudah dijalankan
+19. **cucumber-report-html:** Ini adalah hasil generate report test yang sudah dijalankan
 
 ## Prerequisites
 
@@ -86,37 +86,37 @@ Cara menjalankan generate report
 **1. Overview berdasarkan features**
 Terdapat 2 features yaitu User Login dan User Logout
 
-![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/c48e3af3-6d27-4d2f-90a4-0daa994fc6a6)
+![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/9b968c2a-a9d1-4b39-8f3a-275c5193724f)
 
 - Terdapat grafik yang menunjukkan statistik status scenario
 - Jumlah feature yang dieksekusi adalah 2 yaitu User Login dan User Logout
 - Scenario pada feature user login yang dieksekusi menghasilkan pass (passed) berjumlah 1 dan fail (failed) berjumlah 5 dengan total 6 scenario, skipped (terlewati) 0, pending (tertunda) 0, undefined (tidak terdefinisi) 0
 - Scenario pada feature user logout yang dieksekusi menghasilkan pass (passed) berjumlah 1 dengan total 1 scenario
-- Steps pada feature user login yang dieksekusi menghasilkan status pass (passed) berjumlah 27, status fail (failed) berjumlah 5, dan status skipped (terlewati) berjumlah 1, pending (tertunda) 0, undefined (tidak terdefinisi) 0
+- Steps pada feature user login yang dieksekusi menghasilkan status pass (passed) berjumlah 28, status fail (failed) berjumlah 5, dan status skipped (terlewati) 0, pending (tertunda) 0, undefined (tidak terdefinisi) 0
 - Total steps pada feature login berjumlah 33
 - Steps pada feature user logout yang dieksekusi menghasilkan status pass (passed) berjumlah 4
 - Total steps pada feature logout berjumlah 4
-- Waktu untuk eksekusi feature user login (Duration) adalah 25s 703ms
-- Waktu untuk eksekusi feature user logout (Duration) adalah 6s 164ms
-- Total duration untuk fetaure login dan logout adalah 31s 867ms
+- Waktu untuk eksekusi feature user login (Duration) adalah 22s 852ms	
+- Waktu untuk eksekusi feature user logout (Duration) adalah 4s 041ms
+- Total duration untuk fetaure login dan logout adalah 26s 893ms
 
 **2. Overview berdasarkan tags**
 Tags ini mewakili setiap scenario atau test case pada suatu features 
 
-![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/75b4b511-b7e9-4f71-9d8b-059c3ee9a697)
+![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/fdf47287-a783-4558-b185-646c73125f12)
 
 - Terdapat 7 tags yang artinya terdapat 7 scenario dengan hasil pengujian atau status scenario yang bisa dilihat pada gambar di atas
   
 **3. Test Result Fitur Login**
 
-![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/202cc580-1c89-416e-bd30-d4c650c5d003)
+![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/5785e7ed-328b-4ee9-8280-cc4f048d785a)
 
 -  Scenario dengan tags '@TC0.0.1' menghasilkan status scenario pass (passed) untuk setiap step yang ditandai dengan warna hijau
 -  Scenario dengan tags '@TC0.0.2' menghasilkan status scenario fail (fail) karena terdapat step yang gagal pada step "Then" yang ditandai dengan warna merah. Dapat dilihat detail error messagenya
 -  Terdapat waktu eksekusi untuk setiap step
 -  Begitu pun yang lainnya dibaca seperti yang sudah saya jelaskan
   
-**4. Test Result Fitur Login**
+**4. Test Result Fitur Logout**
 
 ![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/59d04d79-3c66-4354-bd0e-4b98711c4e9f)
 
