@@ -61,10 +61,18 @@ Clone project ini
 
 ## Menjalankan Tests
 
-Jalankan command ini untuk menjalankan test
+Jalankan command ini untuk menjalankan semua test
 
 ```bash
   mvn test
+```
+Jalankan command ini untuk menjalankan salah satu test
+
+```bash
+  mvn test -Dcucumber.filter.name="nama-scenario"
+```
+```bash
+  mvn test -Dcucumber.filter.tags="nama-tags"
 ```
 ## Generate Report by tools
 
