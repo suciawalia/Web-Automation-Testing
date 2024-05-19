@@ -17,6 +17,15 @@ Web automation testing pada project ini menggunakan:
 - Cucumber Reporting
 - Maven
 
+## Test Cases
+1. Login Menggunakan Username yang Terdaftar pada Sistem
+2. Login dengan Keadaan Username dan Password Tidak Diisi
+3. Login dengan Keadaan Username Tidak Diisi
+4. Login dengan Keadaan Password Tidak Diisi
+5. Login dengan Keadaan Username Tidak Terdaftar pada Sistem
+6. Login dengan Keadaan Username Terdaftar Pada Sistem namun Password Tidak Sesuai
+7. Logout dengan Menekan Tombol "Logout"
+
 ## Directory Tree Project
 
 ### Penjelasan Directory Root Project
@@ -55,26 +64,18 @@ Clone project ini
 Jalankan command ini untuk menjalankan test
 
 ```bash
-   mvn test
+  mvn test
 ```
 ## Generate Report by tools
 
-Dengan menambahkan "html:test-report.html" pada TestRunner.java
+Cara menjalankan generate report
 
 ```bash
-@CucumberOptions(features="src/test/resources",
-        glue= {"com.testswaglabs.stepdefinition"},
-        plugin ={"pretty","json:target/cucumber.json","html:test-report.html"}
-        )
+  mvn verify
 ```
-## Test Cases
-1. Login Menggunakan Username yang Terdaftar pada Sistem
-2. Login dengan Keadaan Username dan Password Tidak Diisi
-3. Login dengan Keadaan Username Tidak Diisi
-4. Login dengan Keadaan Password Tidak Diisi
-5. Login dengan Keadaan Username Tidak Terdaftar pada Sistem
-6. Login dengan Keadaan Username Terdaftar Pada Sistem namun Password Tidak Sesuai
-7. Logout dengan Menekan Tombol "Logout"
+```bash
+  mvn verify -DskipTests
+```
 
 ## Hasil Tests
 ### Root file test report
@@ -82,31 +83,46 @@ Dengan menambahkan "html:test-report.html" pada TestRunner.java
 ..\test-report.html
 ```
 ### Hasil Test Report
-**1. Summary**
+**1. Overview berdasarkan features**
+Terdapat 2 features yaitu User Login dan User Logout
 
-![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/ffb90a61-712f-4e1b-a302-c2b13dc58b8f)
+![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/c48e3af3-6d27-4d2f-90a4-0daa994fc6a6)
 
-- Jumlah scenario yang dieksekusi dan menghasilkan fail (Failed) adalah 5
-- Jumlah scenario yang dieksekusi dan menghasilkan pass (Passed) adalah 2
-- Waktu untuk eksekusi testnya (Duration) adalah 1m 30.646s
-- Test yang dinjalankan mengguanakan dependency cucumber-JVM versi 6.9.0
-- Java Runtime Environment OpenJDK 64-Bit Server VM versi 25.382-b05.
-- Sistem operasi (Windows 11) dan arsitektur CPU (amd64)
+- Terdapat grafik yang menunjukkan statistik status scenario
+- Jumlah feature yang dieksekusi adalah 2 yaitu User Login dan User Logout
+- Scenario pada feature user login yang dieksekusi menghasilkan pass (passed) berjumlah 1 dan fail (failed) berjumlah 5 dengan total 6 scenario, skipped (terlewati) 0, pending (tertunda) 0, undefined (tidak terdefinisi) 0
+- Scenario pada feature user logout yang dieksekusi menghasilkan pass (passed) berjumlah 1 dengan total 1 scenario
+- Steps pada feature user login yang dieksekusi menghasilkan status pass (passed) berjumlah 27, status fail (failed) berjumlah 5, dan status skipped (terlewati) berjumlah 1, pending (tertunda) 0, undefined (tidak terdefinisi) 0
+- Total steps pada feature login berjumlah 33
+- Steps pada feature user logout yang dieksekusi menghasilkan status pass (passed) berjumlah 4
+- Total steps pada feature logout berjumlah 4
+- Waktu untuk eksekusi feature user login (Duration) adalah 25s 703ms
+- Waktu untuk eksekusi feature user logout (Duration) adalah 6s 164ms
+- Total duration untuk fetaure login dan logout adalah 31s 867ms
 
-**2. Test Result Fitur Login**
+**2. Overview berdasarkan tags**
+Tags ini mewakili setiap scenario atau test case pada suatu features 
 
-![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/10bf9216-1ecc-40c2-b64e-9e4038d98a7b)
+![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/75b4b511-b7e9-4f71-9d8b-059c3ee9a697)
 
-![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/be3abfb3-5d2e-4aab-ab3c-2bf593573fe6)
+- Terdapat 7 tags yang artinya terdapat 7 scenario dengan hasil pengujian atau status scenario yang bisa dilihat pada gambar di atas
+  
+**3. Test Result Fitur Login**
 
-Dari hasil eksekusi scenario untuk fitur login terdapat 5 scenario yang dieksekusi yaitu 
-- User successfully logs in with registered username and password dengan scenario status passed semua yang ditandai dengan icon ceklis bewarna hijau
-- User attempts to login without providing username and password dengan scenario status failed detailnya pada tahap expected result "Then" yang ditandai dengan icon x berwarna merah
-- User attempts to login without providing username dengan scenario status failed detailnya pada tahap expected result "Then" yang ditandai dengan icon x berwarna merah
-- User attempts to login without providing password dengan scenario status failed detailnya pada tahap expected result "Then" yang ditandai dengan icon x berwarna merah
-- Username isn't registered in the system dengan scenario status failed detailnya pada tahap expected result "Then" yang ditandai dengan icon x berwarna merah dan terdapat scenario status skipped pada tahap "And I should remain on the login page"
-- Password isn't registered in the system dengan scenario status failed detailnya pada tahap expected result "Then" yang ditandai dengan icon x berwarna merah
+![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/202cc580-1c89-416e-bd30-d4c650c5d003)
 
+-  Scenario dengan tags '@TC0.0.1' menghasilkan status scenario pass (passed) untuk setiap step yang ditandai dengan warna hijau
+-  Scenario dengan tags '@TC0.0.2' menghasilkan status scenario fail (fail) karena terdapat step yang gagal pada step "Then" yang ditandai dengan warna merah. Dapat dilihat detail error messagenya
+-  Terdapat waktu eksekusi untuk setiap step
+-  Begitu pun yang lainnya dibaca seperti yang sudah saya jelaskan
+  
+**4. Test Result Fitur Login**
+
+![image](https://github.com/suciawalia/Web-Automation-Testing/assets/99374578/59d04d79-3c66-4354-bd0e-4b98711c4e9f)
+
+- Terdapat hooks yang berisi kondisi sebelum pengujian atau eksekusi (before) dan setelah pengujian atau eksekusi (after)
+- Scenario dengan tags 'TC0.1.1' menghasilkan status scenario pass (passed) untuk setiap step ynag ditandai dengan warna hijau
+- Terdapat waktu eksekusi untuk setiap step
 
 ## Kelompok 7
 - 211524001 | Adinda Faayza Malika [@adindafaayza](https://github.com/adindafaayza)
