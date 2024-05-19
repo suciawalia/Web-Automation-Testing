@@ -61,7 +61,7 @@ public class LoginStepDefinitions {
         assertTrue(currentUrl.contains(loginPage));
     }
 
-    @Then("I should see the error message {string}")
+    @And("I should see the error message {string}")
     public void verifyErrorMessage(String errorMessage) {
         String actualErrorMessage = login.getErrorMessage();
         System.out.println("Expected error message: " + errorMessage);
