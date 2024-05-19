@@ -88,7 +88,7 @@ Cara menjalankan generate report
 ## Hasil Tests
 ### Root file test report
 ```
-..\cucumber-report-html
+\cucumber-report-html
 ```
 ### Hasil Test Report
 **1. Overview berdasarkan features**
